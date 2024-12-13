@@ -2,4 +2,6 @@
 
 int status1 = INIT;
 int status2 = INIT;
-int count = 0;
+int red = 5;
+int green = 7;
+int yellow = 2;

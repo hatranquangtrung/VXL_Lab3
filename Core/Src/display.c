@@ -242,16 +242,17 @@ void display_7SEG_automatic()
 	default:
 		break;
 	}
+
 }
 
-void display_manual(int MODE){
+void display_manual(int MODE, int temp){
 	switch(automatic_7SEG){
 	case E01:
 		HAL_GPIO_WritePin(E0_GPIO_Port, E0_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(E1_GPIO_Port, E1_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(E2_GPIO_Port, E2_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(E3_GPIO_Port, E3_Pin, GPIO_PIN_SET);
-		display7SEG1(count/10);
+		display7SEG1(temp/10);
 		display7SEG2(0);
 		if(timer3_flag == 1)
 		{
@@ -264,7 +265,7 @@ void display_manual(int MODE){
 		HAL_GPIO_WritePin(E1_GPIO_Port, E1_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(E2_GPIO_Port, E2_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(E3_GPIO_Port, E3_Pin, GPIO_PIN_RESET);
-		display7SEG1(count%10);
+		display7SEG1(temp%10);
 		display7SEG2(MODE);
 		if(timer3_flag == 1)
 		{

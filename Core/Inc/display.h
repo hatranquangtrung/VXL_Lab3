@@ -7,5 +7,5 @@
 void display7SEG1();
 void display7SEG2();
 void display_7SEG_automatic();
-void display_manual(int MODE);
+void display_manual(int MODE, int temp);
 #endif /* INC_DISPLAY_H_ */

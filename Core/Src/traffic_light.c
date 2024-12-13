@@ -57,3 +57,6 @@ void setLightYellow(int lane){
 		break;
 	}
 }
+void redMode(){
+
+}

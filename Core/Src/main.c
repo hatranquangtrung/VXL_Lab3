@@ -57,7 +57,15 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 /* USER CODE END 0 */
-
+void led_red(){
+	HAL_GPIO_WritePin(R1_GPIO_Port, R1_Pin, RESET);
+}
+void led_greeen(){
+	HAL_GPIO_WritePin(G1_GPIO_Port, G1_Pin, RESET);
+}
+void led_yellow(){
+	HAL_GPIO_WritePin(Y1_GPIO_Port, Y1_Pin, RESET);
+}
 /**
   * @brief  The application entry point.
   * @retval int
@@ -95,12 +103,17 @@ int main(void)
   setTimer1(50);
   setTimer2(50);
   /* Infinite loop */
+//  SCH_Add_Task(led_red, 0, 500);
+//  SCH_Add_Task(led_greeen, 100, 700);
+//  SCH_Add_Task(led_yellow, 200, 200);
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
 	  fsm_manual_run();
-    /* USER CODE BEGIN 3 */
+//	  SCH_Update();
+//	  SCH_Dispatch_Tasks();
+	  /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -245,6 +258,7 @@ static void MX_GPIO_Init(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timer_run();
 	getKeyInput();
+//	SCH_Update();
 }
 /* USER CODE END 4 */
 

@@ -21,6 +21,8 @@
 
 extern int status1;
 extern int status2;
-extern int count;
+extern int red;
+extern int green;
+extern int yellow;
 
 #endif /* INC_GLOBAL_H_ */

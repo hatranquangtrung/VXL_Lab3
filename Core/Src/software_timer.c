@@ -63,8 +63,6 @@ void timer_run () {
 		}
 	if( timer5_counter > 0) {
 		timer5_counter --;
-		if(timer5_counter%100==0)
-			count--;
 		if( timer5_counter == 0)
 			timer5_flag = 1;
 		}

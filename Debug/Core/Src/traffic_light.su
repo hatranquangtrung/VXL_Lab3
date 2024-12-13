@@ -2,3 +2,4 @@ traffic_light.c:3:6:setOfLight	16	static
 traffic_light.c:18:6:setLightRed	16	static
 traffic_light.c:32:6:setLightGreen	16	static
 traffic_light.c:46:6:setLightYellow	16	static
+traffic_light.c:60:6:redMode	4	static

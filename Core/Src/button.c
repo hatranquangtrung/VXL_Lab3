@@ -33,7 +33,7 @@ int isButton3Pressed(){
 }
 void subKeyProcess(int i){
 	if(i==0){
-	button1_flag = 1;
+		button1_flag = 1;
 	}
 	else if(i==1){
 		button2_flag = 1;
